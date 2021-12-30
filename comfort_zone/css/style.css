@@ -1,0 +1,1785 @@
+
+legend{
+  color:#003c80;
+  border-bottom: none;
+  font-weight: bold;
+}
+
+label#sr{clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;}
+/**********************************************************************************
+                             HEADER E FOOTER                            
+********************************************************************************/
+img#logo_header,img#logo_footer{
+  width: 100%;
+  padding-top: 0;
+ 
+}
+
+footer p{
+  font-size: 125%;
+}
+
+
+div#div_logo_head img#logo_header{
+   margin-top:-15%;
+}
+
+header, footer{
+  background-color: #003c80;/*rgb(0, 70, 149);*/
+}
+
+header *, footer *{
+  padding:5px 0px;
+  color: #ffcd42; /*rgb(255, 187, 0);*/
+  
+}
+
+/*footer*/
+footer li{
+  display:inline;
+  padding:1% 2%;
+}
+
+footer img{
+  width:20%;
+}
+
+footer{
+  padding:5%;
+  text-align: center;
+}
+
+/* header barra di ricerca*/
+header div#accesso{
+  font-weight: bold;
+  border-style: solid;
+  text-align: center;
+  border-radius:10px;
+  border-width: 2px;
+  margin-top: 3%;
+}
+
+
+
+header form button, header form input{
+  color: #005bc3;
+  border-style: solid;
+  border-color: #005bc3;
+  background-color: #f5f2c5;
+  font-size: 125%;
+  padding:1%;
+  margin: 1% 0;
+}
+
+header form input[type="hidden"]+input[type="button"]{
+  margin: 0.5% 0 0.5% 2% ;
+}
+
+
+
+header form span{
+  color: #005bc3;
+  background-color: #f5f2c5;
+}
+
+header .glyphicon{
+  font-size: 200%;
+  cursor:pointer;
+}
+
+header form input, header form button{
+height: 46px;
+}
+
+header div#utente_head a{
+  font-weight: bold;
+}
+
+header a:hover{
+  color: #ffcd42;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+header a span[class="badge"]{
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffcd42 ;
+}
+
+
+/*
+@media only screen and (max-width: 1490px) {
+  #add_tag_btn{
+    font-weight: bold;
+    font-size: 80%;
+    padding:0;
+  }
+}
+
+@media only screen and (min-width: 1490px) {
+  #add_tag_btn{
+    font-weight: bold;
+    font-size: 115%;
+  }
+}*/
+
+
+@media only screen and (min-width: 768px){
+  
+  header form input#add_tag_btn{
+    font-size: 100%;
+    font-weight: bold;
+  }
+}
+
+
+@media only screen and (max-width: 768px){
+  footer>div div:first-of-type {
+    width: 50%;
+    margin: 0 25%;
+    align-self: center;
+  }
+}
+
+/*telefono*/
+@media only screen and (max-width: 768px) and (orientation : portrait){
+  /*img#logo_footer{
+    width: 200%;
+    padding-top: 0;
+  }*/
+
+  
+
+  body header{
+    z-index: 99;
+    position: sticky;
+    top: 0;
+  }
+
+  header .glyphicon{
+    font-size: 150%;
+    
+  }
+
+/*
+  header span[onclick="esci()"] .glyphicon{
+    font-size: 75%;
+  }*/
+  
+  header span#nav{
+    padding: 0;
+    margin: 1%;
+    font-size: 150%;
+  }
+  
+  header div[id="carrello_head"], header div[id="notifiche_head"], header div[id="esci_head"], header div[id="utente_head"]{
+    padding: 0;
+    margin: 0;
+  }
+ header div[id="esci_head"]{
+    padding: 0;
+    margin: 0 2% ;
+
+  }
+
+  header div[id="carrello_head"]{
+    padding-right: 2%;
+    
+  }
+
+  div#div_logo_head{
+    
+    padding:0;
+    margin:1%;
+  }
+}
+
+
+
+/************************************************************************************
+                              MENU LATERALE
+*************************************************************************************/
+
+.overlay {  
+  height: 100%;
+  width: 0;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  background-color: rgba(1, 38, 83, 0.9);
+  /*background-color: rgba(0,0,0, 0.9); */
+  overflow-x: hidden; 
+  transition: 0.5s; 
+}
+
+
+.overlay-content {
+  position: relative;
+  top: 15%; 
+  width: 100%; 
+  text-align: center; 
+  margin-top: 1%; 
+}
+
+
+
+.overlay a,.overlay button{
+  padding: 0.3%;
+  text-decoration: none;
+  font-size: 300%;
+  /*color: #818181;*/
+  color: #ffcd42;
+  display: block; 
+  transition: 0.3s; 
+}
+
+
+
+.overlay a:hover, .overlay a:focus, .overlay button:hover{
+  /*color: #f1f1f1;*/
+  font-weight: bold;
+}
+
+
+.overlay .closebtn {
+  position: absolute;
+  top: 2%;
+  right: 4%;
+  font-size: 500%;
+}
+
+header span#nav{
+  font-size:200%;
+  cursor:pointer;
+}
+
+
+@media only screen and (max-width: 768px){
+  .overlay a,.overlay button{
+    font-size: 200%;
+  }
+
+  .overlay .closebtn {
+
+    font-size: 300%;
+  }
+}
+
+
+
+
+
+
+/************************************************************************************
+                  DROPDOWN IN MENU LATERALE
+*************************************************************************************/
+
+.dropdown-btn {
+  /*padding: 6px 8px 6px 16px;*/
+  text-decoration: none;
+  /*font-size: 36px;*/
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+/*
+.main {
+  margin-left: 200px; 
+  font-size: 20px; 
+  padding: 0px 10px;
+}*/
+
+.active{
+  background-color: #ffcd42;  /*rgb(4, 138, 161);*/
+  color: #003c80 !important;
+  font-weight: bold;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #003c80;/*#262626;*/
+  padding-left: 0.3%;
+}
+
+.dropdown-container a{
+  font-size: 200%;
+}
+/*
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}*/
+
+@media only screen and (max-width: 768px){
+  .dropdown-container a{
+    font-size: 150%;
+  }
+}
+
+
+/************************************************************************************
+                      ACCESSO REGISTRAZIONE e MOD.DATI
+************************************************************************************/
+
+
+form[name="registrazione"], form[name="accesso"], form[name="edit_dati"]{
+  margin: 1% 25%;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #003c80;
+  padding: 1% 5%;
+}
+
+form[name="registrazione"] input[type="text"], form[name="registrazione"] input[type="password"], form[name="registrazione"] input[type="file"], form[name="accesso"] input[type="text"], form[name="accesso"] input[type="password"] , form[name="edit_dati"] input[type="text"], form[name="edit_dati"] input[type="password"]{
+  display:block;
+  margin-bottom: 2%;
+  width:100%;
+}
+
+form[name="registrazione"] input[type="submit"], form[name="accesso"] input[type="submit"], form[name="edit_dati"] input[type="submit"], form[name="prodotto"] input[type="submit"]{
+  color:#ffcd42;
+  font-weight: bold;
+  font-size: 125%;
+  background-color: rgb(0, 60, 128);
+  border-style: hidden;
+  border-radius: 5px;
+  padding:2%;
+}
+
+input[type="password"]{
+  font-weight: bold;
+  font-size: 150%;
+}
+
+
+
+form[name="prodotto"]{
+  margin: 1% 5%;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #003c80;
+  padding: 1% 5%;
+}
+
+
+form[name="prodotto"] ul{
+  padding: 0;
+}
+
+form[name="prodotto"] input[type="text"], form[name="prodotto"] input[type="file"], form[name="prodotto"] textarea{
+  margin-bottom: 2%;
+  width:100%;
+}
+
+
+form[name="prodotto"] input[type="number"],form[name="prodotto"] img{
+  display:block;
+  width:20%;
+  margin-bottom: 2%;
+}
+
+form[name="prodotto"] h2#checkboxes+ul li{
+  display:inline-block;
+  width:45%;
+}
+
+@media only screen and (max-width: 768px){
+  
+form[name="registrazione"], form[name="accesso"], form[name="edit_dati"]{
+  margin: 1% 5%;
+  
+}
+
+}
+
+.container-login{
+  grid-template-columns: 100%;
+  display: grid;
+}
+
+/*
+#error{
+  margin: 4%;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media only screen and (min-width:700px){
+  #error{ 
+    font-size: 150%;
+  }
+}
+*/
+
+/***********************************************************************************
+                            ORDINI
+************************************************************************************/
+
+div#ordini section{
+  margin: 1%;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #003c80;
+  padding: 1%;
+}
+
+div#ordini article{
+  border-bottom: 2px solid #003c80;
+  border-top: 2px solid #003c80;
+  padding:5%;
+  text-align: center;
+  font-size: 110%;
+}
+
+div#ordini article h4{
+  font-size: 150%;
+}
+
+div#ordini label{
+  margin:5%;
+}
+
+div#ordini img{
+  width:25%;
+  border: 5px solid #555;
+  border-radius: 15px;
+}
+
+
+
+
+
+
+/************************************************************************************
+                              HOME UTENTE
+*************************************************************************************/
+
+/* dots of the banner */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 1%;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.containerDot{
+  margin:0%;
+  padding: 0;
+}
+
+section .row{
+  margin: 0;
+  padding: 0;
+}
+
+.pallini, .banner{
+  margin: 0;
+  padding: 0;
+}
+
+/* Fading animation of the dots*/
+main .active{
+  background-color: #717171;
+}
+
+/*images of the banner*/
+.fade img{
+  width: 90%;
+  margin:4%;
+  text-align: center;
+  margin-right: 6%;
+}
+
+/*animation of the banner*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5s;
+  animation-name: fade;
+  animation-duration: 5s;
+  margin: 0%;
+  padding: 0%;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+main h2{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #003c80;
+  font-size: 150%;
+}
+
+main h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #003c80;
+  font-size: 200%;
+  text-align: center;
+}
+
+
+
+/*link*/
+li a{
+  text-decoration: none;
+  color: #003c80;
+  font-weight: bold;
+}
+
+
+li a:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.grid-container-prodotti ul{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  margin: 4%;
+}
+
+@media only screen and (max-width: 768px){
+  /* images of the categories*/
+  figure img{
+    width: 80%;
+  }
+}
+
+
+
+@media only screen and (min-width: 769px){
+  /* images of the categories*/
+  figure img{
+    width: 15%;
+  }
+}
+
+@media only screen and (min-width: 980px) and (max-width: 1330px){
+  #categorie figcaption{
+    font-size: 50%;
+  }
+}
+
+
+figcaption{
+  font-size: 70%;
+}
+
+figcaption:hover{
+  text-decoration: underline;
+}
+
+/*section where the user can change his data*/
+.editUtente{
+  margin: 4%;
+  font-size: 150%;
+}
+
+/*h2 in the section where the user can change his data*/
+#editdati{
+  font-size: 150%;
+}
+
+.consegne{
+  margin: 4%;
+  font-size: 150%;
+}
+.prodotti{
+  margin: 4%;
+  font-size: 200%;
+}
+
+#categorie{
+  margin: 4%;
+  font-size: 200%;
+}
+
+.grid-container-prodotti img{
+  border-radius: 100px;
+}
+
+.prodotti h2{
+  margin: 4%;
+}
+
+@media only screen and (max-width:700px){
+  .grid-container-prodotti img{
+    padding: 0;
+  }
+}
+
+/* images of the products and the categories*/
+.grid-container-prodotti img, figure img{
+  background-color: rgba(255, 255, 255, 0.705);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 15%;
+
+}
+
+
+/* button to edit the data*/
+#btnedit{
+  background-color: #003c80;
+  border-style: outset;
+  border-radius: 10px;
+  color: #ffcd42;
+  padding: 4%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 80%;
+  font-weight: bold;
+  margin: 3% 0% 5%;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#btnedit:hover{
+  opacity: 0.4;
+}
+
+
+
+figure img:hover, .grid-container-prodotti img:hover{
+  opacity: 0.2;
+}
+
+figure img{
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  width: 100%;
+  margin: 3%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+main label{
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.grid-container-datiUtente{
+  display: grid;
+  background-color: rgba(255, 255, 255, 0.8);
+  grid-template-columns: 100%;
+  margin: 4%;
+}
+
+.editUtente h2{
+  margin: 4%;
+}
+
+#nav{
+  text-align: left;
+}
+
+@media only screen and (max-width:500px){
+  img#logo{
+    width: 200%;
+  }
+}
+
+@media only screen and (min-width:440px){
+  #nav{
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+/*link in the main, in particular the link with the names of the categories*/
+main a:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.grid-container-p-consegne {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  grid-template-rows: 30% 40% 30%;
+  grid-gap: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+
+#fotouni{
+  width: 100%;
+}
+
+.cnsp p{
+  font-size: 125%;
+}
+
+
+
+.grid-container-p-consegne>.cnsfoto{
+  grid-column: 1 / 5;
+  grid-row: 1 / 3;
+}
+
+.grid-container-p-consegne>.cnsp{
+  grid-column: 4 / 6;
+  grid-row: 2;
+  text-align: justify center;
+  padding: 3% 0 20% 3%;
+  background-color: #003c80;
+  color:#ffcd42;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 480px){
+  .cnsp p{
+    font-size: 100%;
+  }
+  
+  
+  .grid-container-p-consegne>.cnsfoto{
+    grid-column: 1 / 8;
+    grid-row: 1;
+  }
+  
+  .grid-container-p-consegne>.cnsp{
+    grid-column: 1 / 8;
+    grid-row: 2;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 480px){
+  .cnsp p{
+    font-size: 100%;
+  }
+  
+  
+  .grid-container-p-consegne>.cnsfoto{
+    grid-column: 1 / 8;
+    grid-row: 1;
+  }
+  
+  .grid-container-p-consegne>.cnsp{
+    grid-column: 1 / 8;
+    grid-row: 3;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 600px){
+  .cnsp p{
+    font-size: 125%;
+  }
+  
+  
+  .grid-container-p-consegne>.cnsfoto{
+    grid-column: 1 / 8;
+    grid-row: 1;
+  }
+  
+  .grid-container-p-consegne>.cnsp{
+    grid-column: 1 / 8;
+    grid-row: 3;
+  }
+}
+
+/************************************************************************************
+                              HOME VENDITORE
+*************************************************************************************/
+
+main h3, main h4{
+  color: #003c80;
+  color: #003c80;
+}
+
+main{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+#sectprod>h2{
+  color:#ffcd42;
+}
+
+#artprod h3:hover {
+  color: #ffcd42;
+}
+
+/*button to add products*/
+#addprod, .grid-container-fattorini a{
+  background-color: #ffcd42;
+  border-style: outset;
+  border-radius: 10px;
+  color: #003c80;
+  padding: 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 120%;
+  font-weight: bold;
+  margin: 5% 4% 5%;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+section#sectprod{
+  border-radius: 15px;
+}
+
+section#sectprod img{
+  border-radius: 15px;
+}
+
+section#sectprod div{
+  border-radius: 15px;
+}
+
+#addprod:hover, .grid-container-fattorini a:hover{
+  opacity: 0.4;
+}
+
+.editVenditore{
+  margin: 4%;
+  font-size: 100%;
+}
+
+.ele li{
+  color: black;
+  font-weight: bold;
+
+}
+
+.eleimg{
+  margin: 10%;
+}
+
+@media only screen and (min-width: 700px){
+  .prodotti img{
+    width: 70%;
+    border: solid #555;
+  }
+
+  .editVenditore{
+    margin: 4%;
+    font-size: 150%;
+  }
+
+  #addprod{
+    margin: 1% 4% 5%;
+    padding: 1%;
+  }
+
+  #btnedit{
+    margin: 3% 0% 1%;
+  }
+
+  .eleimg{
+    padding-left: 15%;
+  }
+
+  .ele{
+    margin: 2%;
+    padding: 2%;
+  }
+
+  .ele h4{
+    font-size: 80%;
+  }
+
+  #sectprod h2{
+    font-size: 200%;
+  }
+
+  #btnedit{
+    width: 20%;
+    padding: 1%;
+  }
+
+  .ele a{
+    border: 20px solid #003c80;
+    background-color: #003c80;
+    color: #ffcd42;
+  }
+
+  .ele a:hover{
+    border: 20px solid #ffcd42;
+    background-color: #ffcd42;
+    color: #003c80;
+  }
+}
+
+  /************************************************/
+  .prodotti p{
+    font-size: 80%;
+  }
+
+  #sectprod{
+    margin: 0 4% 15%;
+    background-color: #003c80;
+    padding: 1% 1% 1% 1%;
+    border-radius: 5px;
+  }
+
+  .prodinfo{
+    font-size: 80%;
+  }
+
+
+  .ele li{
+    text-align: left;
+    font-size: 60%;
+  }
+
+  
+  .ele a{
+    border-radius: 15px;
+    font-weight:bold;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60%;
+  }
+  
+  .ele a:hover{
+    text-decoration: underline;
+  }
+  
+
+
+
+@media only screen and (max-width: 700px){
+  .prodotti img{
+    width: 100%;
+    border: solid #555;
+  }
+  .editUtente label{
+    font-size: 80%;
+  }
+
+  .ele{
+    margin: 10%;
+    padding: 2%;
+  }
+
+
+  .ele li{
+    text-indent: -40%;
+  }
+
+  .linkedit, .linkdelete{
+    background-color: #ffcd42;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+
+
+  .ele a {
+    color: #003c80;
+    border-radius: 15px;
+    font-weight:bold;
+    text-align: center;
+    text-decoration: none;
+    font-size: 60%;
+  }
+/*
+  .ele a:hover{
+    background-color: #003c80;
+    color: #ffcd42;
+  }
+*/
+  #sectprod{
+    margin: 0 1% 15%;
+  }
+
+}
+
+
+.grid-container-prod {
+  display: grid;
+  background-color: rgba(255, 255, 255, 0.8);
+  grid-template-columns: 50% 50% ;
+  padding: 1%;  
+
+}
+
+
+/************************************************************************************
+                              HOME FATTORINO
+*************************************************************************************/
+
+#ordinicorrenti{
+  margin: 4%;
+}
+
+.riepilogo-ordini {
+  margin:2%;
+}
+
+.grid-container-fattorini  li{
+  margin: 1%;
+  font-weight: bold;
+}
+
+
+.grid-container-fattorini {
+  display: grid;
+  background-color: rgba(255, 255, 255, 0.8);
+  grid-template-columns: 60% 40%;
+  border: 2px solid rgb(0, 60, 128);
+  border-radius: 15px;
+  margin: 3% 0;
+
+}
+
+
+/************************************************************************************
+                              GRIGLIA PRODOTTI
+*************************************************************************************/
+
+.grid-container {
+  display: grid;
+  background-color: rgba(255, 255, 255, 0.8);
+  grid-template-columns:11% 14% 25% 25% 25%;
+  padding: 1%;  
+  border-radius: 15px;
+
+}
+
+.image {
+  grid-row: 1 / span 3;
+  grid-column: 1 /span 2;
+  width:90%;
+  height: 90%;
+  max-height: 90%;
+  margin-right: 10%;
+  
+  
+}
+
+.image img {
+  width:100%;
+  border: 5px solid #555;
+}
+
+#row_element{
+  grid-column: 3 /span 3;
+  
+}
+
+
+/************************************************************************************
+                              LISTA PRODOTTI
+*************************************************************************************/
+
+
+.product-list {
+  background-color: dodgerblue;
+  border-radius: 15px;
+  margin: 1% 1% 3% 1%; 
+}
+
+.product-list article  { /*sfondo dei vari articoli*/
+  padding: 0.5% 1% 0.5% 1%;
+}
+
+.product-list article:first-child { /*sfondo del primo articolo*/
+  padding: 1% 1% 0.5% 1%;
+}
+
+.product-list article:last-child { /*sfondo dell' ultimo articolo*/
+  padding: 0.5% 1% 1% 1%;
+}
+
+.product-list article>div>h2, .product-list article p { /*nome e descrizione degli articoli*/
+  grid-column: 3 /span 3;
+} 
+
+
+
+.product-list article a {
+  color: rgb(0, 87, 168);
+}
+
+.product-list article a>h2 { /*dimensione titolo*/
+  font-size:200%;
+  white-space:pre-wrap;
+}
+
+.product-list article a:hover, .product-list article a :hover  {/*hover sul link dle nome del prodotto*/
+  text-decoration: underline;
+  color: rgb(0, 87, 168);
+  
+}
+
+.product-list article>div>div{/*contenitore immagine*/
+  grid-row: 1 / span 3;
+  grid-column: 1 /span 2;
+  width:90%;
+  height: 90%;
+  max-height: 90%;
+  margin-right: 10%;
+  
+}
+
+.product-list article img {/*immagine e bordo*/
+  width:100%;
+  border: 5px solid #555;
+  border-radius: 15px;
+}
+
+
+.product-list article p{
+  font-size: 250%;
+}
+
+#no-product {
+  background-color: rgb(255, 255, 255);
+}
+
+#no-product> p {
+  font-size: 150%;
+  color: rgb(0, 87, 168);
+  margin: 5% 2% 5%;
+}
+
+.product-list article h2 {
+  font-size: 300%;
+}
+
+.product-list article label {
+  font-size: 200%;
+}
+
+.product-list article label a {
+  font-size: 100%;
+}
+
+/************************************************************************************
+                              PRODOTTO CORRENTE
+*************************************************************************************/
+
+.current-product article  { /*sfondo dell'articolo corrente*/
+  padding: 1% 1% 1% 1%;
+  border-radius: 15px;
+  margin: 1%;
+  border-color: dodgerblue;
+  border-style: dashed;
+  border-width: 3px;
+}
+
+.current-product article>div>h2, .current-product article p { /*nome e descrizione degli articoli*/
+  grid-column: 3 /span 3;
+} 
+
+.current-product article>div>h2 { /*dimensione titolo*/
+  white-space:pre-wrap;
+}
+
+.current-product article label>a {
+  color: rgb(0, 87, 168);
+}
+
+.current-product article label>a:hover {/*hover sul link dle nome del prodotto*/
+  text-decoration: underline;
+  color: rgb(0, 87, 168);
+  
+}
+
+.current-product article>div>div { /*contenitore immagine*/
+  grid-row: 1 / span 3;
+  grid-column: 1 /span 2;
+  width:90%;
+  height: 90%;
+  max-height: 90%;
+  margin-right: 10%;
+}
+
+.current-product article img, .current-product section img {/*immagine e bordo*/
+  width:100%;
+  border: 1px solid #555;
+  border-radius: 15px;
+}
+
+.current-product article>div>a {/*bottone di aggiunta a carrello/richiesta rifornimento */
+  grid-column: 1 /span 5;
+  grid-row: 4;
+  background-color: rgb(255, 204, 51);
+  color: rgb(0, 87, 168);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1% 0 1% 0;
+  margin-top: 1%;
+  font-size: 120%;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.current-product article>div>a:hover {/*hover bottone sopra*/
+  background-color: rgb(255, 204, 51);
+  color: rgb(0, 87, 168);
+  text-decoration: underline;
+}
+
+.current-product section  { /*sfondo degli articoli consigliati*/
+  background-color: white;
+  text-align: center;
+  padding: 1% 1% 1% 1%;
+}
+
+.current-product section h3 { /*titolo sezione articoli consigliati*/
+  color: rgb(0, 87, 168); 
+}
+
+.current-product section ul { /*griglia prodotti consigliati*/
+  display: grid;
+  background-color: rgba(225, 225, 225, 0.8);
+  grid-template-columns:20% 20% 20% 20% 20%;
+  padding: 0%; 
+  border-radius: 15px;
+  gap: 1%;  
+}
+
+.current-product section a{
+  color: rgb(0, 87, 168); 
+}
+
+.current-product section a:hover{
+  color: rgb(0, 87, 168); 
+}
+
+article.current_product {
+  padding: 1%;
+}
+
+.current-product article p{
+  font-size: 250%;
+}
+
+.current-product article h2 {
+  font-size: 300%;
+}
+
+.current-product article label {
+  font-size: 200%;
+}
+
+.current-product article label a {
+  font-size: 100%;
+}
+
+/************************************************************************************
+                              CARRELLO
+*************************************************************************************/
+ 
+.cart {
+  background-color: DodgerBlue;
+  border-radius: 15px;
+  margin: 1% 1% 3% 1%;
+}
+
+.cart>label {
+  text-align: center;
+  font-size: 120%;
+  padding: 2%;
+  width: 100%;
+}
+
+.cart article  { /*sfondo dei vari articoli*/
+
+  padding: 0.5% 1% 0.5% 1%;
+
+}
+
+.cart:first-child { /*sfondo del primo articolo*/
+  background-color: rgb(30, 144, 255);
+  padding: 1% 0% 0.5% 0%;
+}
+
+.cart:last-child { /*sfondo dell' ultimo articolo*/
+  background-color: DodgerBlue;
+  padding: 0.5% 0% 1% 0%;
+}
+
+.cart article>div>h2 { /*nome degli articoli*/
+  grid-column: 3 /span 3;
+} 
+
+.cart article>div>h2 { /*dimensione titolo*/
+  white-space:pre-wrap;
+}
+
+.cart article>div>div { /*contenitore immagine*/
+  grid-row: 1 / span 3;
+  grid-column: 1 /span 2;
+  width:90%;
+  height: 90%;
+  max-height: 90%;
+  margin-right: 10%;
+}
+
+.cart article img {/*immagine e bordo*/
+  width:100%;
+  border: 5px solid #555;
+  border-radius: 15px;
+}
+
+.cart article>div>label {/*label di testo*/
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.cart article>div>p {/*rimpiazzo a bottone +*/
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: #c0c0c0; 
+  margin: 0%;
+  border-radius: 15px;
+}
+
+.cart a {/*pulsanti -,+,cancella*/
+  background-color: rgb(255, 204, 51);
+  color: rgb(0, 87, 168);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding: 0% 0 0 0;
+  margin: 1%;
+  font-size: 200%;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.cart a:hover {
+  background-color: rgba(255, 204, 51, 0.8);
+  /*color: rgb(0, 87, 168);*/
+  text-decoration: none;
+}
+
+.cart article>div>a:first-child { /*pulsante -*/
+  text-decoration: none;
+  grid-column: 3 /span 1;
+  grid-row: 2;
+}
+
+.cart article>div>a:nth-child(2) { /*pulsante +*/
+  text-decoration: none;
+  grid-column: 5 /span 1;
+  grid-row: 2;
+}
+
+
+.cart article>div>a:last-child { /*pulsante cancella*/
+  grid-column: 5 /span 1;
+  font-size: 120%;
+  grid-row: 3;
+}
+/*
+.cart article>div>a:last-child:hover, .cart section a:hover {
+  text-decoration: underline;
+}*/
+
+.cart section a {
+  margin: 2% 0;
+}
+ .cart section a {
+   margin: 1%;
+ }
+
+ .cart section h3 {
+  color: black;
+  text-align: center;
+  font-size: 150%;
+  margin: 2%;
+ }
+
+
+
+.cart article p{
+  font-size: 250%;
+ }
+
+.cart article h2 {
+  font-size: 300%;
+ }
+
+.cart article label {
+  font-size: 200%;
+ }
+
+.cart article label a {
+  font-size: 100%;
+ }
+
+
+/************************************************************************************
+                              FORM ACQUISTO
+*************************************************************************************/
+
+  div.order-recap input[type=text], select {
+    width: 96%;
+    padding: 1%;
+    margin: 1% 2%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  div.order-recap input[type=submit], .order-recap form a {
+    width: 96%;
+    background-color: rgb(255, 204, 51);
+    color: rgb(0, 87, 168);
+    padding: 1%;
+    margin: 1% 2%;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 120%;
+  }
+  
+  .order-recap form>div:nth-of-type(1), .order-recap form section:nth-of-type(2) {
+  border: 5px solid rgb(0, 87, 168);
+  border-radius: 15px;
+  margin: 2%;
+  padding: 2% 0;
+  }
+
+  .order-recap form>div>div {
+    margin: 2%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .order-recap form a {
+    width: 100%;
+    margin: 0;
+    padding: 1% 0;
+    grid-column: 1;
+    text-align: center;
+    font-size: 120%;
+  }
+
+ .order-recap a:hover {
+  background-color: rgb(255, 204, 51);
+  color: rgb(0, 87, 168);
+  text-decoration: underline;
+ }
+
+  .order-recap form label {
+    margin-left: 2%;
+  }
+
+  div.order-recap input[type=submit]:hover {
+    text-decoration: underline;
+    background-color: rgb(255, 204, 51);
+    color: rgb(0, 87, 168);
+  }
+
+  div.order-recap section:first-of-type {
+    background-color: DodgerBlue;
+    border-radius: 15px;
+    margin: 1% 2%;
+  }  
+
+  .order-recap form section:last-of-type label {
+    font-size: 130%;
+    margin: 3% 2% 0 2%;
+  }
+
+  .order-recap form section:last-of-type input {
+    margin: 1% 2% 3% 2%;
+  }
+  div.order-recap article {
+    padding: 0.5% 1% 0.5% 1%;
+  }
+
+  div.order-recap article:first-child {
+    padding: 1% 1% 0.5% 1%;
+  }
+
+  div.order-recap article:last-child {
+    padding: 0.5% 1% 1% 1%;
+  }
+
+  div.order-recap article h3  {
+    grid-column: 3 /span 3;
+  }
+
+  div.order-recap article div>div  {
+    grid-row: 1 / span 3;
+    grid-column: 1 /span 2;
+    width:90%;
+    height: 90%;
+    max-height: 90%;
+    margin-right: 10%;
+  }
+
+  .order-recap article img {/*immagine e bordo*/
+    width:100%;
+    border: 5px solid #555;
+  }
+
+  .order-recap h2{
+    margin: 2%;
+  }
+
+  .order-recap h2#riepilogo-ordine{
+    padding-top: 3%;
+    color: black;
+  }
+    
+  
+   .order-recap  article h3 {
+    font-size: 300%;
+   }
+  
+   .order-recap article label {
+    padding-top: 20%;
+    font-size: 200%;
+   }
+  
+  
+
+/************************************************************************************
+                              THANK YOU
+*************************************************************************************/
+
+.thank-you {
+  margin: 0 2% 0 2%;
+}
+
+div.thank-you>h2{
+  color: rgb(0, 87, 168);
+}
+
+div.thank-you>a{
+  background-color: rgb(255, 204, 51);
+  color: rgb(0, 87, 168);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;  
+  font-size: 120%;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 1%;
+  width: 49%;
+  margin: 1% 0% 3% 0%;
+}
+
+div.thank-you>a:hover {
+  text-decoration: underline;
+}
+
+/************************************************************************************
+                              NOTIFICHE
+*************************************************************************************/
+
+.notification {
+  margin: 1% 2%;
+}
+
+div.notification div{
+  background-color: rgb(0, 87, 168);
+  border-radius: 15px;
+  margin: 1% 0;
+  padding: 0.1% 0;
+}
+
+div.notification div.new-notification {
+  background-color: rgb(255, 204, 51);
+}
+
+div.notification div label {/*notifiche nuove*/
+  font-weight: bold;
+  font-size: 110%;
+  
+}
+
+div.notification div>div.notification-text{
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 2%;
+  border-radius: 15px;
+  padding: 2%;
+  
+}
+
+div.notification div a {
+  color: rgb(0, 87, 168);
+  font-weight: bold;
+}
+
+div.notification div a:hover {
+  color: rgb(0, 87, 168);
+  text-decoration: underline;
+}
+
+.notification>button {
+  background-color: white;
+  color: rgb(0, 87, 168);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;  
+  font-size: 200%;
+  font-weight: bold;
+  border-style: solid;
+  border-radius: 15px;
+  padding: 1%;
+  width: 38%;
+  margin: 1% 0% 3% 0%;
+}
+
+.notification>button:disabled {
+  color: #AAA;
+  border-color: #AAA;
+}
+
+.notification>label{
+  color: rgb(0, 87, 168);
+  width: 22%;
+  padding: 0, 4%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 180%;
+
+}
+
+/************************************************************************************
+                              MOBILE VISUAL
+*************************************************************************************/
+
+@media only screen and (max-width: 800px){
+
+  .product-list label {
+    font-size: 80%;
+  }
+
+  .current-product label {
+    font-size: 80%;
+  }
+
+  .current-product h4 {
+    font-size: 77%;
+  }
+
+  .cart label {
+    font-size: 80%;
+  }
+
+  .cart article>div>a:first-child { /*pulsante -*/
+    font-size: 100%;
+  }
+  
+  .cart article>div>a:nth-child(2) { /*pulsante +*/
+    font-size: 100%;
+  }
+  
+  
+  .cart article>div>a:last-child { /*pulsante cancella*/
+    font-size: 80%;
+  }
+
+  .order-recap  section label {
+    font-size: 75%;
+  }
+
+  .notification>button, .notification>label {
+    width: fit-content;
+  }
+  /*****************/
+  .product-list article p{
+    font-size: 100%;
+  }
+  
+  .product-list article h2 {
+    font-size: 150%;
+  }
+  
+  .product-list article label {
+    font-size: 70%;
+  }
+  
+  .product-list article label a {
+    font-size: 100%;
+  }
+
+  .current-product article p{
+    font-size: 100%;
+  }
+  
+  .current-product article h2 {
+    font-size: 150%;
+  }
+  
+  .current-product article label {
+    font-size: 70%;
+  }
+  
+  .current-product article label a {
+    font-size: 100%;
+  }
+
+  .cart article p{
+    font-size: 80%;
+  }
+  
+  .cart article h2 {
+    font-size: 150%;
+  }
+  
+  .cart article label {
+    font-size: 70%;
+  }
+  
+  .cart article label a {
+    font-size: 100%;
+  }
+
+  .order-recap  article h3 {
+    font-size: 100%;
+   }
+  
+   .order-recap article label {
+    padding-top: 20%;
+    font-size: 70%;
+   }
+
+   div.thank-you>a{
+    font-size: 100%;
+  }
+}
